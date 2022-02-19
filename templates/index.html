@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Predictor de precios</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<script src="https://kit.fontawesome.com/33bcf2578e.js" crossorigin="anonymous"></script>
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Predictor</a></h1>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Predictor</h2>
+							<p> <span class = "title_pred"> precios de inmuebles </span><br /><br />
+							<span class = "names">Hecho por: 
+                            <a class = "names" href="https://brunocuevas.ml/" target = "_blank">Bruno Cuevas</a>, 
+                            <a class = "names" href="https://www.fernandoguastavino.tk/" target = "_blank">Fernando Guastavino</a>, 
+                            <a class = "names" href="https://www.linkedin.com/in/juan-segundo-del-boca-80725a1a5/" target = "_blank">Eugenia García Creus</a>, 
+                            <a class = "names" href="https://www.linkedin.com/in/eugeniagarciacreus/" target = "_blank">Juan Segundo del Boca</a> y
+                            <a class = "names" href="https://www.linkedin.com/in/marcos-de-aloysio-b04978222/" target = "_blank">Marco de Aloysio</a>
+                            </span>
+                         </p>
+						</div>
+						<a href="#one" class="more scrolly"></a>
+					</section>
+				<!-- Three -->
+					<section id="three" class="wrapper style3 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Funcionamiento del Predictor</h2>
+								<p> Usando modelos de Machine Learning procesamos los datos que ingreses y te damos el precio de la propiedad que estas buscando.<br /></p>
+							</header>
+							<form action = "prediction" method = "POST" enctype="multipart/form-data">
+                                <ul class="features">
+                                    <li class="icon fa-paper-plane">
+                                        <h3>Selecciona el Tipo de vivienda</h3>
+                                        <select name="vivienda">
+                                            <option value="departamento">Departamento</option>
+                                            <option value="casa">Casa</option>
+                                        </select>
+                                    </li>
+									
+                                    <li class="icon solid fa-house-damage">
+                                        <h3>Selecciona la condición</h3>
+                                        <select name="condicion">
+                                            <option value="new">Nuevo</option>
+                                            <option value="used">Usado</option>
+                                        </select>
+                                    </li>
+                                    <li class="icon solid fa-chart-area">
+                                        <h3>Selecciona los metros cuadrados</h3>
+                                        <select name="area" id="area">
+                                            <option value="300">300m2</option>
+                                            <option value="400">400m2</option>
+                                            <option value="500">500m2</option>
+                                            <option value="600">600m2</option>
+                                        </select>
+                                    </li>
+									
+									
+                                    <li class="icon solid fa-location-arrow">
+                                        <h3>Selecciona el Lugar</h3>
+                                        <select name="lugar" id="area">
+                                            <option value="pinamar">Pinamar</option>
+                                            <option value="mdq">Mard del Plata</option>
+                                            <option value="Recoleta">Recoleta</option>
+                                            <option value="Puerto Madero">Puerto Madero</option>
+                                            <option value="Belgrano">Belgrano</option>
+                                            <option value="Palermo">Palermo</option>
+                                            <option value="Las Lomas Village">Las Lomas Village</option>
+                                            <option value="La Lucila">La Lucila</option>
+                                        </select>
+                                    </li>
+                                </ul>
+								<input type="submit" name = "btn" value="Predecir!">	
+                            </form>
+						</div>
+					</section>
+
+                    	<!-- One -->
+					<section id="one" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>El precio estimado de la propiedad es: <span class = "predict">{{data}}</span> USD</h2>
+								<p>Los datos están siendo predecidos con un Random Forest entrenado con más de 100000 datos obtenidos de <a href = "https://www.mercadolibre.com.ar/" target = "_blank"> Mercado Libre. </a> </a></p>
+							</header>
+							<ul class="icons major">
+								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
+								<li><span class="icon fa-money-bill-alt major style2"><span class="label">Ipsum</span></span></li>
+								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Final Análisis de Datos</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.scrollex.min.js"></script>
+			<script src="../static/js/jquery.scrolly.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+			
+			<!-- ESTE CÓDIGO ES PARA QUE NO REFRESQUE -->
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+			{% if scrollToAnchor %}
+				<script>
+					document.addEventListener("DOMContentLoaded", function() {
+						document.location.hash = '#{{ scrollToAnchor }}';
+					});
+				</script>
+			{% endif %}
+
+	</body>
+</html>

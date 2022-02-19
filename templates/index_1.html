@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prediction</h1>
+
+    <form action = "prediction" method = "POST" enctype="multipart/form-data">
+        
+        <label> Selecciona el Tipo de vivienda</label>
+
+        <select name="vivienda">
+            <option value="departamento">Departamento</option>
+            <option value="casa">Casa</option>
+        </select>
+
+        <label> Selecciona la condición</label>
+
+        <select name="condicion">
+            <option value="new">Nuevo</option>
+            <option value="used">Usado</option>
+        </select>
+        
+        <label> Selecciona los metros cuadrados</label>
+
+        <select name="area" id="area">
+            <option value="300">300m2</option>
+            <option value="400">400m2</option>
+            <option value="500">500m2</option>
+            <option value="600">600m2</option>
+        </select>
+
+        <label> Selecciona el Lugar</label>
+
+        <select name="lugar" id="area">
+            <option value="pinamar">Pinamar</option>
+            <option value="mdq">Mard del Plata</option>
+            <option value="Recoleta">Recoleta</option>
+            <option value="Puerto Madero">Puerto Madero</option>
+            <option value="Belgrano">Belgrano</option>
+            <option value="Palermo">Palermo</option>
+            <option value="Las Lomas Village">Las Lomas Village</option>
+            <option value="La Lucila">La Lucila</option>
+        </select>
+
+        <input type="submit" name = "btn" value="predict!">
+    </form>
+
+    <p>The predicion is {{data}}</p>
+
+
+</body>
+</html>
