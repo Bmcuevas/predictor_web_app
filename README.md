@@ -1,5 +1,5 @@
 # predictor_web_app 
-# INSTRUCCIONES
+## INSTRUCCIONES
 Pasos a seguir: 
 1) Descargar el repositorio. 
 2) Abrir el terminal. 
