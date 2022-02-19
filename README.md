@@ -1,4 +1,4 @@
-# predictor_web_app 
+# Predictor de inmuebles. 
 ## INSTRUCCIONES
 Pasos a seguir: 
 1) Descargar el repositorio. 
