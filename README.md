@@ -1,4 +1,7 @@
 # Predictor de inmuebles. 
+
+Video explicativo del proyecto: https://www.youtube.com/watch?v=hQ32ZjC54NE&ab_channel=BrunoCuevas
+
 ## INSTRUCCIONES
 Pasos a seguir: 
 1) Descargar el repositorio. 
